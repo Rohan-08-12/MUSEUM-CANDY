@@ -1,0 +1,148 @@
+/* General Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f5d9df;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Navbar */
+#mainNavbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    font-weight: 100;
+    background: transparent;
+    transition: background 0.3s ease;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+#mainNavbar.scrolled {
+    background: rgb(222, 192, 222);
+}
+
+.navbar-brand {
+    color: #EA1C2C;
+    text-decoration: none;
+    font-size: 1.8rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #EA1C2C;
+}
+
+/* Navbar Toggle for Mobile */
+.navbar-toggler {
+    display: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Hero Section */
+#headingGroup {
+    color: white;
+    text-align: center;
+    padding: 6rem 1rem;
+}
+
+#headingGroup h1 {
+    font-weight: 100;
+    font-size: 4rem;
+}
+
+#headingGroup span {
+    color: #EA1C2C;
+}
+
+#hand2 {
+    width: 100%;
+    padding: 0;
+}
+
+/* Content Section */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.content img {
+    width: 100%;
+    max-width: 500px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Blurb Styles */
+.blurb h2 {
+    color: #EA1C2C;
+    font-weight: 100;
+    font-size: 2.5rem;
+}
+
+.blurb p {
+    color: #f498b8;
+    font-weight: 100;
+    font-size: 1.125rem;
+    line-height: 2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    #headingGroup h1 {
+        font-size: 3rem;
+    }
+
+    .navbar-toggler {
+        display: inline-block;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgb(222, 192, 222);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+}
